@@ -15,12 +15,20 @@ import java.util.Scanner;
  */
 public class ArithmeticBase 
 {
+    
+    public enum Operation{PLUS, MINUS, TIMES, DIVIDE};
+    public final Operation operation;
+    
+   public Operation operation()
+   {
+		return this.operation;
+	}
+    
  public double x,y;
     double calculate(double x, double y) 
         {
         Scanner sc =new Scanner(System.in);
-        System.out.println("enter String");
-        String s= sc.next();
+
         switch (s.toUpperCase()) 
         {
             case "PLUS":
@@ -34,6 +42,8 @@ public class ArithmeticBase
             default:
                 throw new AssertionError("Unknown operations " + this);
         }
+        
+        
     }
    
 }
